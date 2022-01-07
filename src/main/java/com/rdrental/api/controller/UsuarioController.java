@@ -17,14 +17,14 @@ import com.rdrental.api.service.UsuarioService;
 
 
 @RestController
-@RequestMapping("/api/rdrental")
+@RequestMapping("/api/rdrental/usuarios")
 public class UsuarioController {
 	
 	@Autowired
 	private UsuarioService service;
 	
 	
-	@GetMapping("/usuarios/valida/{cod}/{clav}")
+	@GetMapping("/valida/{cod}/{clav}")
 	public ResponseEntity<List<Usuario>> listaUsuarioPorCodClav(@PathVariable("cod") String cod,@PathVariable("clav") String clave){
 		
 		List<Usuario> lstUsuario = service.listaUsuarioPorCodClav(cod, clave);

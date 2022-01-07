@@ -2,8 +2,6 @@ package com.rdrental.api.entity;
 
 
 
-
-import java.awt.Image;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -76,7 +74,7 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "identificador")
 	private int id;
 
 	public String getCo_usua() {

@@ -21,8 +21,10 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	@Query("Select a from Usuario a")
 	public abstract List<Usuario> listaUsuarios();
 	
-	@Query("Select a from Usuario a where a.co_usua = :cod and a.no_clav = :clav")
+	@Query("Select a from Usuario a where a.co_usua = :cod and a.no_clav = :clav and st_registro=1")
 	public abstract List<Usuario> listaUsuarioPorCodClav(@Param("cod") String cod, @Param("clav") String clave);
+	
+	
 	
 	
 }
